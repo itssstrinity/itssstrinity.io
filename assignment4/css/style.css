@@ -1,0 +1,56 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+body {
+	color: #EFC3CA;
+	background: #C4727F;
+    font-family: 'bold';
+    position: static;
+    font-size: 48px;
+    background: rgb(196,114,127);
+background: linear-gradient(90deg, rgba(196,114,127,1) 0%, rgba(239,195,202,1) 35%);
+}
+
+
+h1
+{
+    position: relative;
+top: 40px; left: 40px;
+  rotate: 30deg;  
+    
+}
+h2{
+    position: absolute;
+top: 40px; left: 40px;
+}
+p{
+  position: sticky;
+top: 20px;
+}
+
+@font-face { 
+    font-family: 'bold';
+    src: url('font.ttf');
+} 
+
+#container {
+	width: 50px;
+    opacity: 0.5;
+}
+
+
+
+
