@@ -21,7 +21,11 @@ body {
     position: static;
     font-size: 48px;
     background: rgb(196,114,127);
-background: linear-gradient(90deg, rgba(196,114,127,1) 0%, rgba(239,195,202,1) 35%);
+background: rgb(196,114,127);
+background: rgb(196,114,127);
+background: linear-gradient(90deg, rgba(196,114,127,1) 0%, rgba(239,195,202,1) 100%);
+    
+margin-left: 50px;
 }
 
 
@@ -37,6 +41,9 @@ h2{
 top: 40px; left: 40px;
 }
 p{
+margin-left: 50px;
+width: 500px;
+line-height: 60px;
   position: sticky;
 top: 20px;
 }
