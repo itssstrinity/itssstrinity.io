@@ -1,0 +1,141 @@
+/* Base styles for mobile first */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf6;
+    background-image: url("texture2.JPG");
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 1.5em 0;
+  background-color: #fff4e6;
+    background-image: url("texture.jpg");
+    font-family: 'Brush Script MT';
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 4em;
+}
+
+#container {
+  padding: 1em;
+}
+
+.main-content {
+  text-align: center;
+  margin: 1em 0;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 90%;
+  font-size: 1.1em;
+}
+
+cite {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.buttons {
+  text-align: center;
+  margin: 2em 0;
+}
+
+button {
+  margin: 0.5em;
+  padding: 0.6em 1.2em;
+    display: inline-block;
+  font-size: 1em;
+  border: none;
+  background-color: #e0a96d;
+    font-family:'Courier New';
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+     
+}
+
+button:hover {
+  background-color: #cf8e48;
+    animation-name: example;
+  animation-duration: 0.8s;
+    animation: ease-in-out;
+}
+
+section, figure {
+  margin: 1.5em auto;
+  max-width: 90%;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+/* Responsive Video Embed */
+figure.responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+figure.responsive iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* The animation code */
+@keyframes example {
+  0%{transform: translateY(0)}
+  25%{transform: translateY(-10)}
+     50%{transform: translateY(10)}
+  75%{transform: translateY(-10)}
+     100% {transform: translateY(0)}
+}
+
+
+ 
+ 
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  #container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  section, figure {
+    max-width: 70%;
+  }
+}
+

@@ -1,0 +1,91 @@
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #565264;
+}
+
+#container {
+    padding: 20px;
+    max-width: 100%;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 5px solid #ffff;
+}
+
+main section, main figure {
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 10px;
+    background-color:#EFC3CA;
+    color:#C4727F;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive YouTube Video */
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (min-width: 769px) {
+    #container {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    section {
+        flex-basis: 100%;
+    }
+
+    figure {
+        flex-basis: 45%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #container {
+        max-width: 1000px;
+    }
+
+    main {
+        flex-wrap: nowrap;
+    }
+
+    section, figure {
+        flex-basis: 33%;
+    }
+}
+
+
+
+
