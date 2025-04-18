@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Eight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Unfolding Moments</h1>
+</header>
+
+<div id="container">
+  <div class="main-content">
+    <blockquote>
+      "The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."
+      <cite>&mdash; Marcel Proust</cite>
+    </blockquote>
+  </div>
+
+  <div class="buttons">
+    <button id="show-text">Reveal Reflection</button>
+    <button id="show-image">Reveal Image</button>
+    <button id="show-video">Reveal Video</button>
+  </div>
+
+  <section id="hidden-text">
+    <p>Every day holds a new perspective if you allow yourself the space to see it. Sometimes, all it takes is pausing for a moment to rediscover the ordinary through a renewed lens.</p>
+  </section>
+
+  <figure id="hidden-image">
+    <img src="sunrisemountain.jpg" alt="Nature perspective photo">
+    <figcaption>A still from a quiet walk I took — reminding me to notice the little things.</figcaption>
+  </figure>
+
+  <figure id="hidden-video" class="responsive">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/wlXE_6SilCg?si=uU37xlTyf0jTN9z6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </figure>
+</div>
+
+<!-- Link to jQuery on Google CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#hidden-text, #hidden-image, #hidden-video').hide();
+
+    $('#show-text').click(function() {
+      $('#hidden-text').toggle();
+    });
+
+    $('#show-image').click(function() {
+      $('#hidden-image').toggle();
+    });
+
+    $('#show-video').click(function() {
+      $('#hidden-video').toggle();
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
