@@ -104,3 +104,39 @@ img {
   margin-top: 40px;
 }
 
+.features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* makes it mobile-friendly */
+}
+
+.feature-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.feature-item {
+  background-color: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.blue {
+  background-color: var(--blue); 
+  color: var(--white);
+  padding: 10px;
+  text-align: left;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
