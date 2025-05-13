@@ -1,13 +1,9 @@
-/* Reset some default styles */
-
-/*logan act*/
-:root{
+:root {
     --red: #b33939;
     --black: #000000;
     --blue: #3C5AA6;
-    --yellow:#E1B12C;
+    --yellow: #E1B12C;
     --white: #ffffff;
-    
 }
 
 * {
@@ -17,14 +13,19 @@
 }
 
 body {
-    
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: var(--black);
   color: #333;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
+  margin: 0; 
 }
 
-/* Header styles */
+
+
 .site-header {
   background-color: var(--blue);
   padding: 20px;
@@ -37,6 +38,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--white); /* This makes the "FNDA" text white */
 }
 
 .main-nav ul {
@@ -57,46 +59,75 @@ body {
   border-radius: 5px;
 }
 
-/* Main content styles */
 .content {
-  padding: 40px 20px;
+  padding: 20px 30px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
-.hero h1{
-    background-color:  var(--red);
-    color: var(--white);
-    text-align: left;
-    padding-left: 10px;
+.hero h1 {
+  background-color: var(--red);
+  color: var(--white);
+  text-align: left;
+  padding-left: 10px;
 }
+
+.hero img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.header-img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 img {
-    width: 100%;
+  width: 100%;
 }
 
-.blue{
-    background-color:  var(--blue); 
-    color: var(--white);
-    padding-left: 10px;
-    text-align: left;
+.blue {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px;
+  text-align: left;
 }
 
-.features {
+.blue a {
+  color: white;
+}
+
+#longright, #longleft {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: row;
+  flex: 4;
 }
 
-.feature-item {
-  background-color: var(--yellow);
-  flex: 1;
-  text-align: center;
+#longright p.blue, #longleft p.blue {
+  width: 70%;
 }
 
-/* Footer styles */
+#longright img, #longleft img {
+  width: 30%;
+}
+
+/* Footer Styles */
 .site-footer {
   background-color: var(--yellow);
   text-align: center;
@@ -104,39 +135,80 @@ img {
   margin-top: 40px;
 }
 
+/* Feature Block Styles */
 .features {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap; /* makes it mobile-friendly */
+  flex-wrap: wrap;
+  flex: 3;
 }
 
 .feature-block {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
   min-width: 250px;
   max-width: 300px;
 }
 
-.feature-item {
+.feature-item,
+.feature-item1 {
   background-color: var(--yellow);
   color: var(--black);
   text-align: center;
   padding: 10px;
   font-weight: bold;
+  flex: 1;
 }
 
-.blue {
-  background-color: var(--blue); 
-  color: var(--white);
-  padding: 10px;
-  text-align: left;
+.clip-link {
+  width: 100%;
 }
-
 
 .video-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(20px * 8 * 2);
+  animation: slideLeft 3s linear infinite;
+}
+
+.slider-img {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+  padding: 0 10px;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero img {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
